@@ -21,7 +21,7 @@ public class AndroidTest {
 		//File fs = new File (f,"Twitter_v7.35.0_apkpure.com.apk");
 		cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.twitter.android");
 		cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.twitter.android.StartActivity");
-		AndroidDriver<AndroidElement> Adriver = new AndroidDriver<> (new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		AndroidDriver<AndroidElement> Adriver = new AndroidDriver<AndroidElement> (new URL("http://127.0.0.1:4723/wd/hub"),cap);
 		Adriver.findElementByAndroidUIAutomator("text(\"Have an account already? Log in\")").click();
 		Adriver.findElementById("com.twitter.android:id/login_identifier").sendKeys("svr_dheerendra@yahoo.co.in");
 		Adriver.findElementById("com.twitter.android:id/login_password").sendKeys("MOMICHAT123#");

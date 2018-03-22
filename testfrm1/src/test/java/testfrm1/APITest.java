@@ -15,13 +15,13 @@ import io.restassured.response.Response;
 public class APITest {
 	@Test
 	public void GetTwitter(){
-		String ConsumerKey = "nVc97cBmexiS3g01aNCJhW8kE";
-		String ConsumerSecret = "9VOe9bfiEonh3MNEqaRxToq4w3kF55FzirJlHClB8FjhFM7WMD";
+		String ConsumerKey = "SuCJBugaZNY6sqAcyAXz7pr3A";
+		String ConsumerSecret = "dyqkqKcAm4KNLDQTNyGog4Ub3SCgLrAdVMGHb5Y74Wt1y3Bthz";
 		String Token = "970161084903645184-rDT18BuoZRvdIUu50pgHFaCDIJlCYUc";
 		String TokenSecret = "63Ay9TWMOzopAtYPjK3OdaYNendMKewADHugTSiK8N7Yn";
 		RestAssured.baseURI="https://api.twitter.com/1.1/statuses";
 		Response Rep = given().auth().oauth(ConsumerKey, ConsumerSecret, Token, TokenSecret).
-			queryParam("count", "1").
+			//queryParam("count", "1").
 		when().
 			get("/home_timeline.json").
 		then().
@@ -52,10 +52,4 @@ public class APITest {
 		System.out.println("STATUS:" + JP.get("status"));
 		*/
 	}
-
-	private String text(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

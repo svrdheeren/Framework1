@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testfrm1.AndroidTest">
+      <class name="utilities.ExcelUtility">
         <methods>
-          <include name="LoginApp"/>
+          <include name="Driver"/>
         </methods>
-      </class> <!-- testfrm1.AndroidTest -->
+      </class> <!-- utilities.ExcelUtility -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
